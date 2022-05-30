@@ -50,3 +50,11 @@ class TestImage(TestCase):
         Image.objects.all().delete()
         Location.objects.all().delete()
         Category.objects.all().delete()
+
+class CategoryTest(TestCase):
+    def setUp(self):
+        self.category = Category(name='food')
+        self.category.save_category()
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.category, Category))
