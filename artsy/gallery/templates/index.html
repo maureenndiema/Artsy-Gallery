@@ -1,3 +1,54 @@
 {% load static %}
 {% include "head.html" %}
 {% include 'navbar.html' %}
+<section>
+    <header>
+        <div style="background-image:url('');
+            background-size:cover;
+            background-repeat:no-repeat;
+            background-position:center center;
+            min-height:637px">
+            <div class="container h-100 d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="text-center">
+                            <h3 class="white-text">Welcome to my Artsy Pieces</h3>
+                            <a class="btn btn-md btn-dark" href="#view"><i class="fas fa-images fa-2x text-warning"> Albums</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+<main class="container-fluid mt-2 pt-2">
+    {% include "image.html" %}
+</main>
+
+<section style="height: 80px;">
+    {% include "footer.html" %}
+</section>
+<main class="container-fluid mt-2 pt-2">
+    {% include "image.html" %}
+</main>
+
+<section style="height: 80px;">
+    {% include "footer.html" %}
+</section>
+<main class="container-fluid mt-2 pt-2">
+    {% include "image.html" %}
+</main>
+
+<section style="height: 80px;">
+    {% include "footer.html" %}
+</section>
+
+<main class="container-fluid mt-2 pt-2">
+    {% include "image.html" %}
+</main>
+
+<section style="height: 80px;">
+    {% include "footer.html" %}
+</section>
+
+{% include "scripts.html" %}
