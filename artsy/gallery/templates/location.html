@@ -1,0 +1,8 @@
+{% if location_img %}
+<div class="card-columns" id="view">
+    {% for img in location_img %}
+    <a>
+        <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{img.id}}">
+            <img src="{{img.image.url}}" alt="{{img.name}}" class="img-fluid">
+        </div>
+    </a>
