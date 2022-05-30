@@ -1,0 +1,21 @@
+{% load static %}
+<!-- SCRIPTS -->
+<!-- JQuery -->
+<script type="text/javascript" src="{%  static 'js/jQuery.js' %}"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="{%  static 'js/popper.min.js' %}"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="{%  static 'js/bootstrap.min.js' %}"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="{%  static 'js/mdb.min.js' %}"></script>
+<script type="text/javascript">
+    function copylink(value) {
+        function handler(event){
+            event.clipboardData.setData('text/plain', value);
+            event.preventDefault();
+            document.removeEventListener('copy', handler, true);
+        }
+        document.addEventListener('copy', handler, true);
+        document.execCommand('copy');
+    }
+</script>
