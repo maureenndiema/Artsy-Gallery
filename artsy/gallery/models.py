@@ -42,7 +42,20 @@ class Image(models.Model):
     timestamp = models.DateTimeField(auto_now_add=True,auto_now=False)
     update = models.DateTimeField(auto_now_add=False,auto_now=True)
     category = models.ForeignKey(Category,on_delete=models.CASCADE) 
-    location = models.ForeignKey(Location,on_delete=models.CASCADE,default=1)         
+    location = models.ForeignKey(Location,on_delete=models.CASCADE,default=1)  
+
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        ordering = ['-timestamp']
+
+    def save_image(self):
+        self.save() 
+
+    def delete_image(self):
+        self.delete()         
 
 
         
