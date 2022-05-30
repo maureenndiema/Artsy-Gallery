@@ -35,3 +35,13 @@ class TestImage(TestCase):
         found_image = self.image_pic.get_image_by_id(self.image_pic.id)
         images = Image.objects.filter(id=self.image_pic.id)
         self.assertFalse(found_image, images)    
+
+    def test_search_by_category(self):
+        category = 'technology'
+        found_img = self.image_pic.search_by_category(category)
+        self.assertFalse(len(found_img) > 1)  
+    
+    def test_view_location(self):
+        self.image_pic.save()
+        location = Image.view_location(self.location)
+        self.assertTrue(len(location) > 0) 
