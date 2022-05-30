@@ -64,7 +64,22 @@ class Image(models.Model):
     @classmethod
     def get_image_by_id(cls, id):
         image = cls.objects.filter(id=id).all()
-        return image      
+        return image  
+
+    @classmethod
+    def filter_by_location(cls, location):
+        location_img = Image.objects.filter(name_location=location).all()
+        return location_img
+    
+    @classmethod
+    def view_location(cls,name):
+        location = cls.objects.filter(location=name)
+        return location
+
+    @classmethod
+    def view_category(cls,cat):
+        categories = cls.objects.filter(categories=cat)
+        return categories    
 
 
         
