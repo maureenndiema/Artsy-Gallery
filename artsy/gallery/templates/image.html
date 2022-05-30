@@ -1,0 +1,9 @@
+<div class="separator">
+    <h3 class="capitalize dark-text">Artsy <b class="yellow-text">Pieces</b> </h3>
+</div>
+<div class="card-columns" id="view">
+    {% for img in images %}
+    <a>
+        <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{img.id}}">
+            <img src="{{img.image.url}}" alt="{{img.name}}" class="img-fluid">
+        </div>
