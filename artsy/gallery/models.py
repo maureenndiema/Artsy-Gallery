@@ -32,7 +32,17 @@ class Category(models.Model):
         self.save()
 
     def delete_category(self):
-        self.delete()        
+        self.delete() 
+
+class Image(models.Model):
+    image = models.ImageField(upload_to='images/',default='SOMETHING STRONG')
+    title = models.CharField(max_length=200)
+    description = models.TextField()
+    author = models.CharField(max_length=30,null=False,blank=False)
+    timestamp = models.DateTimeField(auto_now_add=True,auto_now=False)
+    update = models.DateTimeField(auto_now_add=False,auto_now=True)
+    category = models.ForeignKey(Category,on_delete=models.CASCADE) 
+    location = models.ForeignKey(Location,on_delete=models.CASCADE,default=1)         
 
 
         
