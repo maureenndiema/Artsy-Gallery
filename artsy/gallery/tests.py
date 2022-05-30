@@ -45,3 +45,8 @@ class TestImage(TestCase):
         self.image_pic.save()
         location = Image.view_location(self.location)
         self.assertTrue(len(location) > 0) 
+
+    def tearDown(self):
+        Image.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
