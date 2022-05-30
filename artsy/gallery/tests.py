@@ -11,3 +11,16 @@ class TestImage(TestCase):
         self.category.save_category()
 
         self.image_pic = Image(id=1, title='image', description='This is photo gallery test',location=self.location,category=self.category)
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.image_pic, Image))    
+
+    def test_save_image(self):
+        self.image_pic.save_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) > 0)
+
+    def test_delete_image(self):
+        self.image_pic.delete_image()
+        images = Image.objects.all()
+        self.assertTrue(len(images) == 0)    
