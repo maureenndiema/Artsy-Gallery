@@ -1,4 +1,6 @@
-{% include 'head.html' %} {% include 'scripts.html' %} {% load static %}
+{% extends 'base.html' %} 
+ {% load static %}
+ {% block content %}
 <footer class="page-footer text-center text-md-left elegant-color-dark">
     <div class="container-fluid py-5">
       <div class="flex-center">
@@ -51,3 +53,4 @@
     <h5>© 2022 Copyright:<a href="#"> maureenndiema</a></h5>
   </div>
 </footer>
+{% endblock %}

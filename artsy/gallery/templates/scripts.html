@@ -1,6 +1,7 @@
 {% load static %}
 <!-- SCRIPTS -->
 <!-- JQuery -->
+{% block content %}
 <script type="text/javascript" src="{%  static 'js/jQuery.js' %}"></script>
 <!-- Bootstrap tooltips -->
 <script type="text/javascript" src="{%  static 'js/popper.min.js' %}"></script>
@@ -19,3 +20,4 @@
         document.execCommand('copy');
     }
 </script>
+{% endblock %}

@@ -1,3 +1,4 @@
+{% block content %}
 <div class="separator">
     <h3 class="capitalize dark-text">Artsy <b class="yellow-text">Pieces</b> </h3>
 </div>
@@ -38,7 +39,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="https://collinsgallery.herokuapp.com{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
+                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
                     <!--Facebook-->
                     <a type="button" class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f black-text"></i></a>
                     <!--Twitter-->
@@ -52,7 +53,7 @@
             </div>
         </div>
     </div><div class="modal-footer justify-content-center">
-        <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="https://collinsgallery.herokuapp.com{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
+        <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
         <!--Facebook-->
         <a type="button" class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f black-text"></i></a>
         <!--Twitter-->
@@ -67,4 +68,6 @@
 </div>
 </div>
 {% endfor %}
+
 </div>
+{% endblock %} 
