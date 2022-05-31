@@ -1,14 +1,20 @@
-
 {% block content %}
 <div class="separator">
     <h3 class="capitalize dark-text">Artsy <b class="yellow-text">Pieces</b> </h3>
 </div>
 <div class="card-columns" id="view">
     {% for image in images %}
+
+    {% if image in images %}
+            <a href="" data-toggle="modal" data-target="#myModal{{ image.id }}"><img
+                src="{{image.images.url}}" class="uploaded-pics" alt="Image"> </a>
+            {% else %}
+            <p>No Image</p>
+            {% endif %}
     <a>
        
         <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
-        <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid" height="90vh"> 
+         <!-- <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid" height="90vh">   -->
         </div>
     </a>
     <div class="modal" id="modal1{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
@@ -19,7 +25,7 @@
                     <h4 class="modal-title dark-text" id="img-header">{{image.title}}</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="{{image.image.url}}" alt="{{image.title}}" class="img-fluid">
+                     <img src="{{image.image.url}}" alt="{{image.title}}" class="img-fluid"> 
                     <div class="pt-3">
                         <h5 class="img-description">
                             <strong><b class="yellow-text">Description:</b></strong>
@@ -29,7 +35,7 @@
                             <strong><b class="yellow-text">Pubished On:</b></strong>
                             {{image.timestamp}}
                         </h5>
-                        <h5 class="img-author">z
+                        <h5 class="img-author">
                             <strong><b class="yellow-text">Author:</b></strong>
                             {{image.author}}
                         </h5>
@@ -37,7 +43,7 @@
                             <strong><b class="yellow-text">Category:</b></strong> 
                             {{image.category}}
                         </h5>
-                        <span class="btn btn-sm btn-outline-yellow">{{img.location}}</span>
+                        <span class="btn btn-sm btn-outline-yellow">{{image.location}}</span>
                     </div>
                 </div>
                

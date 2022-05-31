@@ -1,7 +1,7 @@
 {% block content %} 
-{% if location_img %}
+{% if location_image %}
 <div class="card-columns" id="view">
-    {% for img in location_img %}
+    {% for image in location_image %}
     <a>
         <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
             <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">

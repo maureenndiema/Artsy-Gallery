@@ -15,7 +15,7 @@
     {% endif %}
     {% if images %}
     <div class="card-columns pt-4">
-        {% for img in images %}
+        {% for image in images %}
         <a>
             <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
                 <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
