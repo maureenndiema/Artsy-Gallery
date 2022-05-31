@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+
 {% load static %}
 
 {% block content %}
@@ -17,37 +17,37 @@
     <div class="card-columns pt-4">
         {% for img in images %}
         <a>
-            <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{img.id}}">
-                <img src="{{img.image.url}}" alt="{{img.name}}" class="img-fluid">
+            <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
+                <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
             </div>
         </a>
-        <div class="modal" id="modal1{{img.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        <div class="modal" id="modal1{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered modal-md" role="document">
                 <div class="modal-content modalcard">
                     <div class="modal-header">
-                        <h4 class="modal-title dark-text" id="img-header">{{img.title}}</h4>
+                        <h4 class="modal-title dark-text" id="img-header">{{image.title}}</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="{{img.image.url}}" alt="{{image.title}}" class="img-fluid">
+                        <img src="{{image.image.url}}" alt="{{image.title}}" class="img-fluid">
                         <div class="pt-3">
                             <h5 class="img-description">
                                 <strong><b class="yellow-text">Description:</b></strong>
-                                {{img.description}}
+                                {{image.description}}
                             </h5>
                             <h5 class="img-timestamp">
                                 <strong><b class="yellow-text">Pubished On:</b></strong>
-                                {{img.timestamp}}
+                                {{image.timestamp}}
                             </h5>
                             <h5 class="img-author">
                                 <strong><b class="yellow-text">Author:</b></strong>
-                                {{img.author}}
+                                {{image.author}}
                             </h5>
                             <h5 class="imd-category">
                                 <strong><b class="yellow-text">Category:</b></strong> 
-                                {{img.category}}
+                                {{image.category}}
                             </h5>
-                            <a href="/location/{{img.location}}" class="btn btn-sm btn-outline-primary">{{img.location}}</a>
+                            <a href="/location/{{image.location}}" class="btn btn-sm btn-outline-primary">{{image.location}}</a>
                         </div>
                     </div>
                     {% endfor %}
@@ -57,7 +57,6 @@
 {% endblock %}
 
 <section style="height: 70px;" class="pt-2">
-    {% include "footer.html" %}
+    
 </section>
 
-{% include "scripts.html" %}

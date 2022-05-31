@@ -3,41 +3,41 @@
 <div class="card-columns" id="view">
     {% for img in location_img %}
     <a>
-        <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{img.id}}">
-            <img src="{{img.image.url}}" alt="{{img.name}}" class="img-fluid">
+        <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
+            <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
         </div>
     </a>
-    <div class="modal" id="modal1{{img.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    <div class="modal" id="modal1{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content modalcard">
                 <div class="modal-header">
-                    <h4 class="modal-title dark-text" id="img-header">{{img.title}}</h4>
+                    <h4 class="modal-title dark-text" id="img-header">{{image.title}}</h4>
                 </div>
                 <div class="modal-body">
-                    <img src="{{img.image.url}}" alt="{{image.title}}" class="img-fluid">
+                    <img src="{{image.image.url}}" alt="{{image.title}}" class="img-fluid">
                     <div class="pt-3">
                         <h5 class="img-description">
                             <strong><b class="yellow-text">Description:</b></strong>
-                            {{img.description}}
+                            {{image.description}}
                         </h5>
                         <h5 class="img-timestamp">
                             <strong><b class="yellow-text">Pubished On:</b></strong>
-                            {{img.timestamp}}
+                            {{image.timestamp}}
                         </h5>
                         <h5 class="img-author">
                             <strong><b class="yellow-text">Author:</b></strong>
-                            {{img.author}}
+                            {{image.author}}
                         </h5>
                         <h5 class="imd-category">
                             <strong><b class="yellow-text">Category:</b></strong> 
-                            {{img.category}}
+                            {{image.category}}
                         </h5>
-                        <span class="btn btn-sm btn-outline-yellow">{{img.location}}</span>
+                        <span class="btn btn-sm btn-outline-yellow">{{image.location}}</span>
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
+                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="{{image.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
                     <!--Facebook-->
                     <a type="button" class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f black-text"></i></a>
                     <!--Twitter-->
