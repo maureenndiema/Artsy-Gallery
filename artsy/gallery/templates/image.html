@@ -2,14 +2,18 @@
 <div class="separator">
     <h3 class="capitalize dark-text">Artsy <b class="red-text">Pieces</b> </h3>
 </div>
-<div class="card-columns" id="view">
+<div class="row">
+    <div class="col-md-4" style="display: flex; flex-wrap: wrap;"></div>
     {% for image in images %} 
     <a>
         <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
           <!-- <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid" height="90vh">    -->
         </div>
     </a>
-    <div class="modal" id="modal1{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    
+
+    
+    <div id="modal1{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content modalcard">
@@ -18,7 +22,7 @@
                 </div>
                 <div class="modal-body">
                     {% if image in images %}
-                       <img src="{{image.image.url}}" alt="{{image.title}}" class="img-fluid" height="50px" width="50px"> 
+                       <img src="{{image.image.url}}" alt="{{image.title}}" class="img-responsive" style="height:90vh; width:90vh"> 
                       {% endif %}  
                     <div class="pt-3">
                         <h5 class="img-description">
@@ -62,6 +66,7 @@
         </div>
     
     </div>
+</div>
 </div>
 
 {% endfor %}
