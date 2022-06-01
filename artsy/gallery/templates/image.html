@@ -1,6 +1,6 @@
 {% block content %}
 <div class="separator">
-    <h3 class="capitalize dark-text">Artsy <b class="yellow-text">Pieces</b> </h3>
+    <h3 class="capitalize dark-text">Artsy <b class="red-text">Pieces</b> </h3>
 </div>
 <div class="card-columns" id="view">
     {% for image in images %} 
@@ -22,28 +22,40 @@
                       {% endif %}  
                     <div class="pt-3">
                         <h5 class="img-description">
-                            <strong><b class="yellow-text">Description:</b></strong>
+                            <strong><b class="red-text">Description:</b></strong>
                             {{image.description}}
                         </h5>
                         <h5 class="img-timestamp">
-                            <strong><b class="yellow-text">Pubished On:</b></strong>
+                            <strong><b class="red-text">Pubished On:</b></strong>
                             {{image.timestamp}}
                         </h5>
                         <h5 class="img-author">
-                            <strong><b class="yellow-text">Author:</b></strong>
+                            <strong><b class="red-text">Author:</b></strong>
                             {{image.author}}
                         </h5>
                         <h5 class="imd-category">
-                            <strong><b class="yellow-text">Category:</b></strong> 
+                            <strong><b class="red-text">Category:</b></strong> 
                             {{image.category}}
                         </h5>
                         <h5 class="img-location">
-                        <strong><b class="yellow-text">Location:</b></strong> 
-                        <span class="btn btn-sm btn-outline-yellow">{{image.location}}</span>
+                        <strong><b class="red-text">Location:</b></strong> 
+                        <span class="btn btn-sm btn-outline-red">{{image.location}}</span>
 
                         </h5>
                         
                     </div>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="https://collinsgallery.herokuapp.com{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
+                    <!--Facebook-->
+                    <a type="button" class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f black-text"></i></a>
+                    <!--Twitter-->
+                    <a type="button" class="btn-floating btn-sm btn-tw"><i class="fab fa-twitter blue-text"></i></a>
+                    <!--Google +-->
+                    <a type="button" class="btn-floating btn-sm btn-gplus"><i class="fab fa-google-plus-g red-text"></i></a>
+                    <!--Linkedin-->
+                    <a type="button" class="btn-floating btn-sm btn-ins"><i class="fab fa-linkedin-in green-text"></i></a>
+                    <button type="button" class="btn btn-outline-danger btn-sm ml-4" data-dismiss="modal">Close</button>
                 </div>
                
             </div>

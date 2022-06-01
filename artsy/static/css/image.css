@@ -13,7 +13,7 @@
 .separator::after {
     content: '';
     flex: 1;
-    border-bottom: 2px solid #fbaa3f;
+    border-bottom: 2px solid #8a120e;
 }
 
 .separator::before {
