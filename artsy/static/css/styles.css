@@ -1,0 +1,30 @@
+h3{
+    font-size:35px;
+    font-family: 'Special Elite', cursive;
+}
+
+h4,
+h5{
+    font-family: 'Special Elite', cursive; 
+}
+
+.dropdown a {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Special Elite', cursive;
+    font-weight: bold; 
+}
+
+i.fab {
+    display: inline-block;
+    border-radius: 40px;
+    box-shadow: 2px 2px 2px;
+    padding: 0.2em 0.3em;
+}
+
+.flex-center h4{
+    font-family: 'Special Elite', cursive;
+    box-shadow: 1px 1px 2px #fbaa3f; 
+    padding: 0.2em 0.3em; 
+    font-size: 24px;
+}
