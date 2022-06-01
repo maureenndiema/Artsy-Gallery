@@ -1,4 +1,4 @@
-## Artsy Gallery
+##       ARTSY GALLERY
 
 ## Author
    
@@ -6,7 +6,7 @@
 
 ## Description
   
-  This is a Django application that develops a personal gallery that allows an admin to display your photos for users to see.
+  This is a Django application that develops a personal gallery. It allows an admin to display your photos for users to see.
 
 ## Live Link
    
@@ -40,12 +40,12 @@
  Open the application on your browser 127.0.0.1:8000
 
 ## Technologies Used
-  Python3.8
-  Django 4.0.4
-  Heroku
-  Css
-  Html
-  Bootstrap
+1.Python3.8
+2.Django 4.0.4
+3.Heroku
+4.Css
+5.Html
+6.Bootstrap
 
 ## Contact Information
 
