@@ -3,7 +3,8 @@
     <h3 class="capitalize dark-text">Artsy <b class="red-text">Pieces</b> </h3>
 </div>
 <div class="row">
-    <div class="col-md-4" style="display: flex; flex-wrap: wrap;"></div>
+   
+    <div class="card-columns" id="view"display: flex; flex-wrap: wrap;"></div>
     {% for image in images %} 
     <a>
         <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
@@ -50,7 +51,7 @@
                     </div>
                 </div>
                 <div class="modal-footer justify-content-center">
-                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="https://collinsgallery.herokuapp.com{{img.image.url}}" onclick="copylink(this.value)">Copy Image Link</button>
+                    <button type="button" name="button" class="btn btn-primary btn-sm mr-4" value="" onclick="copylink(this.value)">Copy Image Link</button>
                     <!--Facebook-->
                     <a type="button" class="btn-floating btn-sm btn-fb"><i class="fab fa-facebook-f black-text"></i></a>
                     <!--Twitter-->
