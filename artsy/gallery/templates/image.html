@@ -7,13 +7,11 @@
     <div class="card-columns" id="view"display: flex; flex-wrap: wrap;></div>
     {% for image in images %} 
     <a>
-        <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
-          <!-- <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid" height="90vh">    -->
-        </div>
+        <!-- <div class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}"> -->
+           <!-- <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid" height="70vh"; width="70vh">     -->
+        <!-- </div> -->
     </a>
-    
 
-    
     <div id="modal1{{image.id}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
@@ -23,7 +21,9 @@
                 </div>
                 <div class="modal-body">
                     {% if image in images %}
-                       <img src="{{image.image.url}}" alt="{{image.title}}" class="img-responsive" style="height:70vh; width:70vh"> 
+                    <div  class="card img-responsive" data-toggle="modal" data-target="#modal1{{image.id}}">
+                       <img src="{{image.image.url}}" alt="{{image.title}}" class="img-responsive" style="height:70vh; width:70vh">
+                    </div> 
                       {% endif %}  
                     <div class="pt-3">
                         <h5 class="img-description">
